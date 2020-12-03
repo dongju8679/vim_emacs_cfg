@@ -1,14 +1,26 @@
-set number
-set si
-set autoindent
-set smartindent
-set cindent
-set tabstop=8
-set shiftwidth=8
-set softtabstop=8
-set ignorecase
-"set expandtab
-set noet
+set encoding=utf-8
+
+set nobackup
+set nowritebackup
+set noeb
+set novb
+
+set noerrorbells
+set vb t_vb=
+
+set expandtab           " enter spaces when tab is pressed
+"set textwidth=120       " break lines when line length increases
+set tabstop=4           " use 4 spaces to represent tab
+set softtabstop=4
+set shiftwidth=4        " number of spaces to use for auto indent
+set autoindent          " copy indent from current line when starting a new line
+
+" make backspaces more powerfull
+set backspace=indent,eol,start
+
+set ruler                           " show line and column number
+syntax on               " syntax highlighting
+set showcmd             " show (partial) command in status line
 set background=dark
 set nocompatible
 set ruler
@@ -34,67 +46,19 @@ map ,7 :b!7<CR>
 map ,8 :b!8<CR>
 map ,9 :b!9<CR>
 map ,0 :b!0<CR>
-map <F3> "+Y
-map <F4> "+gP
-vmap <F3> "+y
-vmap <F4> "+gP
-imap <F4> <ESC>"+gPi
+"echo "dongju"
+
 "colorscheme pablo "elflord morning torte zellner shine koehler desert darkblue blue evening ron molokai
 "monokai_pro nemo-light nemo-night gocode typewriter typewriter-night wonka-dark wonka-light mycontrast sidonia mycontrast
-colorscheme gocode
-set encoding=utf-8
-set termencoding=euc-kr
-set fileencoding=euc-kr "utf-8,euc-kr
- 
-"set tags=$CTAGS_DB/tags
-set tags=/home/tz4001/tagsDB/tags
-"set tags=./tags;/
+"nirvana abyss focusedpanic fogbell fogbell_light fogbell_lite github github-old hacker hyper lessthan low
+"notepad-plus-plus mitormk-laser medic_chalk mr-robot simplicity simple-dark simplicity-blue simplicity-darker synthwave84 vacme
+colorscheme github
  
 nmap <C-H> <C-W>h
 nmap <C-J> <C-W>j
 nmap <C-K> <C-W>k
 nmap <C-L> <C-W>l
- 
-" jump previous modified location
-au BufReadPost *
-\ if line("'\"") > 0 && line("'\"") <= line("$") |
-\   exe "normal g`\"" |
-\ endif
- 
-"highlight Normal ctermbg=3 ctermbg=3 ctermfg=0
-"highlight Normal ctermbg=3 ctermbg=3 ctermfg=4
-"highlight Normal ctermbg=3 ctermbg=3 ctermfg=7
-"highlight LineNr ctermfg=0 ctermbg=7
-"highlight Type ctermfg=0
-"highlight Identifier ctermfg=0
-"highlight Statement ctermfg=0
-"highlight Directory ctermfg=0
-"highlight Search ctermbg=4
- 
-"set guifont=Monospace\ Bold\ 10
-"set guifont=Fixed\ 8
-"set guifont=Misc\ 8
-"set guifont=Consolas\ 8
-"set guifont=Inconsolata\ 8
-"set guifont=DejaVu\ 8
-"set guifont=Courier\ Bold\ 9
-"set guifont=Fixed\ 9
-set guifont=Courier\ New\ 9
-"set guifont=DejaVu\ Sans\ Mono\ 9
-"set guifont=Monospace\ 9
-"set guifont=UnShinmun\ 10
-"set guifont=Fixedsysexcelsior2.00\ 11
-"set guifontwide=Hangang\ 11
- 
- 
-"cscope
-"set csprg=/usr/bin/cscope 
-"set csto=0 
-"set cst 
-"set nocsverb 
-"if filereadable("./cscope.out")       
-"    cs add cscope.out                 
-"else                                 
-"    cs add /usr/src/linux/cscope.out  
-"endif                                  
-"set csverb
+set novb
+set noeb
+set noerrorbells
+set vb t_vb=
